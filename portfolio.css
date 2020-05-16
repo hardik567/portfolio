@@ -5,7 +5,6 @@
     flex-direction: column;
     margin-bottom: 0;
     list-style: none;
-    padding-left: 520px;
     font-family: fantasy;
     font-size: 20px;
 }
@@ -14,13 +13,11 @@
     color: #007bff;
 }
 
-.nav-link {
-    color: rgba(0,0,0,.9);
-    margin-right: 20px;
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #007bff;
 }
 
 .container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1140px;
     padding: 60px;
 }
 
@@ -28,42 +25,140 @@ h1, h2, h3, h4, h5, h6 {
     font-family: fantasy;
 }
 
-#particles-js{
-    background-image: url(./silver-bg.png);
-    height: 60vh;
-    width: 100vw;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    left: -200px;
-}
 
-.container{
+.about{
+    background-color: #0E63F0;
+    margin: 20px 0;
     position: relative;
+    right: 0;
+    left: 0;
 }
 
-#about{
-    background-color: blue;
-    background-size: cover;
-    position: absolute;
-    margin: 40px;
-    height: 50vh;
-    width: 100vw;
-    left: -240px;
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .lightbg{
+    background-color: #fff;
+   
+    position: relative;
+    left: 0;
     right: 0;
 }
 
-/* #service{
-    background-image: url(./silver-bg.png);
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    margin: 40px;
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      padding: 30px 30px;
+    }
+  }
+
+  .quote{
+    background-color: #0E63F0;
+    margin: 20px 0;
+    position: relative;
+    right: 0;
+    left: 0;
+}  
+
+.title {
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px
 }
- */
 
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
 
+.content .content-overlay {
+  background: rgba(14, 101, 240, 0.9);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s
+}
 
+.content:hover .content-overlay {
+  opacity: 1
+}
 
+.content-image {
+ width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s
+}
+
+.content:hover .content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1
+}
+
+.content-details h3 {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase
+}
+
+.content-details p {
+  color: #fff;
+  font-size: 0.8em
+}
+
+.fadeIn-bottom {
+  top: 80%
+}
+
+.btn {
+
+  color: #fff;
+  background-color: #0E63F0;
+}
+
+.section-padding{
+  padding: 30px 0 !important;
+}
+
+.pb-3, .py-3 {
+  padding-bottom: 1rem!important;
+  background-color: #f3f4f6;
+}
